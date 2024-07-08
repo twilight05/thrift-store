@@ -1,0 +1,83 @@
+ .hero {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url('../../assets/images/thrift1.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #8f8686;
+  opacity: 20px;
+  z-index: 1; 
+}
+
+
+
+.hero-content {
+  position: relative; /* To position it above the overlay */
+  z-index: 2; /* Ensure text is above overlay */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem; /* Larger font size for desktop */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1281px) {
+  .hero {
+    height: 600px; /* Adjust height for smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px; /* Further adjust height for tablets */
+  }
+  
+  .hero h1 {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 300px; /* Further adjust height for mobile */
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

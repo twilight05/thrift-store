@@ -1,0 +1,39 @@
+.product-details-section {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .product-details-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #494343;
+  }
+  
+  .product-details-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .product-details-section .price {
+    font-size: 1.5rem;
+    color: #c40c0c;
+    margin-bottom: 20px;
+  }
+  
+  .pay-now-button {
+    background-color: #c40c0c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pay-now-button:hover {
+    background-color: #a00a0a;
+  }
+  
