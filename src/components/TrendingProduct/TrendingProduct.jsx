@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './TrendingProduct.css';
-import { FaShoppingCart, FaStar } from 'react-icons/fa';
+import Button from '../Button/Button';
+import { FaStar } from 'react-icons/fa';
+import { CartContext } from '../../contexts/CartContext'; 
 import tp1 from '../../assets/images/tp1.png';
 import tp2 from '../../assets/images/tp2.png';
 import tp3 from '../../assets/images/tp3.png';
@@ -10,7 +12,6 @@ import tp6 from '../../assets/images/tp6.png';
 import tp7 from '../../assets/images/tp7.png';
 import tp8 from '../../assets/images/tp8.png';
 import tp9 from '../../assets/images/tp9.png';
-
 
 const products = [
   { title: 'Product 1', price: '$20.00', image: tp1 },
@@ -25,19 +26,25 @@ const products = [
 ];
 
 const TrendingProduct = () => {
+  const { addToCart } = useContext(CartContext); 
 
-          return (
+  const handleOrderNow = (product) => {
+    addToCart(product);
+  };
+
+  return (
     <div className="trending-products-section">
-      <h2>Trending Products</h2>
+      <h2> Products</h2>
       <div className="card-container">
         {products.map((product, index) => (
           <div className="card" key={index}>
+            <div className="card-image">
             <img src={product.image} alt={product.title} />
+            </div>
             <div className="card-title">
               {product.title}
-              <FaShoppingCart className="add-to-cart-icon" />
             </div>
-            <div className='card-container'>
+            <div  className='card2'>
             <div className="card-rating">
               {[...Array(5)].map((star, i) => (
                 <FaStar key={i} className="star-icon" />
@@ -45,11 +52,9 @@ const TrendingProduct = () => {
               <p className="card-price">{product.price}</p>
             </div>
             <div>
-            <button className="order-button" onClick={() => handleOrderNow(product)}>
-              Order Now
-            </button>
-            </div>
-            </div>
+            <Button className="order-button" text="Add to cart" onClick={() => handleOrderNow(product)} />
+              </div>
+              </div>
           </div>
         ))}
       </div>

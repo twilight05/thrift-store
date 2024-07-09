@@ -1,30 +1,38 @@
-import React from 'react';
-import Button from '../Button/Button';
-import { FashoppingCart } from 'react-icons';
+import React, { useState, useContext } from 'react';
+import carti from '../../assets/images/carti.png';
 import './Navbar.css';
+import Button from '../Button/Button';
+import { CartContext } from '../../contexts/CartContext';
+import { Link } from 'react-router-dom';
 
-const Navbar = ({func}) => (
+const Navbar = ({func}) => {
+  const { cart } = useContext(CartContext);
+
+  const cartCount = cart.length;
   
-  <nav className="navbar">
-    <div className="navbar-brand">No.1 Thrift</div>
 
-  {/* My designer removed this but just in casae she changes her mnd, i'll just comment it out */}
-      {/* <ul className="nav-menu"> 
-       <li className="nav-item">Home</li>
-      <li className="nav-item">Products</li> 
-      <li className="nav-item">FAQs</li>
-      <li className="nav-item">Contact</li>
-     </ul> */}
-      
+  return (
+    <>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/" className="navbar-brand">No.1 Thrift</Link>
+      </div>
+      <div className="nav-menu">
+        
+      <div className="cart-icon-container" onClick={func}>
+      <img src={carti} alt="CartIcon" />
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+        </div>
+
+        <Link to="/trending" className="nav-link explore-link">
+          <Button text="Explore" className="explore-button" />
+        </Link>
+      </div>
+    </nav>
     
-   <div className='nav-menu'>
-    <input type="text" className="search-bar" placeholder="Search..." />
-    <Button className="cart-button" onClick={func}>
-    <FaShoppingCart className="add-to-cart-icon" /> </Button>
-    <Button className="btn-primary" onClick={func} text="Explore" ></Button>
-    </div>
-          
-  </nav>
-);
+    </>
+  );
+};
+
 
 export default Navbar;

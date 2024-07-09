@@ -1,52 +1,38 @@
-/* 
+
+
 .btn {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  .btn-primary {
-    background-color: #333;
-    color: #fff;
-  }
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
 
-  .btn-secondary {
-    background-color: #fff;
-    color: #333;
-  }
-  
-  .btn-primary:hover {
-    background-color: #555;
-  }
-   */
+.btn:hover {
+  background-color: #333;
+}
 
-   .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  
-  /* .btn:hover {
-    background-color: #333;
-  } */
-  
-  .order-now {
-    background-color: #000;
-    color: #000;
-    border-radius: 20px;
-    padding: 10px 20px;
-  }
-  
-    .card-button {
-        color: #333;
-        border: 1px solid #333;
-        border-radius: 20px;
-        padding: 10px 20px;
-        background-color: #fff;
-    }
+.order-button {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 2px;
+  width: 83px;
+  height: 30px;
+  top: 479px;
+  left: 262px;
+  padding: 9px 12px 9px 12px;
+  margin-top: 30px;
+  margin-right: 10px;
+  font-size: 11px;
+}
 
-
-  
+.card-button {
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
