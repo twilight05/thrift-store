@@ -12,6 +12,15 @@ import tp6 from '../../assets/images/tp6.png';
 import tp7 from '../../assets/images/tp7.png';
 import tp8 from '../../assets/images/tp8.png';
 import tp9 from '../../assets/images/tp9.png';
+import tp10 from '../../assets/images/tp10.png';
+import tp11 from '../../assets/images/tp11.png';
+import tp12 from '../../assets/images/tp12.png';
+import tp13 from '../../assets/images/tp13.png';
+import tp14 from '../../assets/images/tp14.png';
+import tp15 from '../../assets/images/tp15.png';
+import tp16 from '../../assets/images/tp16.png';
+import tp17 from '../../assets/images/tp17.png';
+import tp18 from '../../assets/images/tp18.png';
 
 const products = [
   { title: 'Classic Nike sneakers', price: '2,500', image: tp1 },
@@ -23,6 +32,15 @@ const products = [
   { title: 'Rubber croc sandal', price: '2,500', image: tp7 },
   { title: 'Floral sneakers', price: '2,500', image: tp8 },
   { title: 'Burgundy fashion boots', price: '1,000', image: tp9 },
+    { title: 'Hoodie with head cover', price: '7,500', image: tp10 },
+    { title: 'T-shirt', price: '2,500', image: tp11 },
+    { title: 'Female hoodie', price: '5,000', image: tp12 },
+    { title: 'Bucket Cap', price: '800', image: tp13 },
+    { title: 'Stylish cultural face cap', price: '1,500', image: tp14},
+    { title: 'Female white hoodie', price: '4,000', image: tp15 },
+    { title: 'Pleated belt', price: '2,500', image: tp16 },
+    { title: 'Floral medium sized bra', price: '500', image: tp17 },
+    { title: 'Denim short', price: '1,000', image: tp18},
 ];
 
 const TrendingProduct = () => {
