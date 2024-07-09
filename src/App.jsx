@@ -6,6 +6,7 @@ import TrendingProducts from './components/TrendingProduct/TrendingProduct';
 import MyCart from './components/MyCart/MyCart';
 import CheckoutPage from './pages/Checkout/CheckoutPage'; 
 import { CartProvider } from './contexts/CartContext';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [showCart, setShowCart] = useState(false);
@@ -21,14 +22,16 @@ const App = () => {
   return (
     <CartProvider>
       <Router>
-        <Navbar func={handleCartClick} toggleCart={toggleCart} />
-        {showCart && <MyCart />}
+        <Navbar func={handleCartClick}  />
+        
+        {/* {showCart && <MyCart />} */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage showCart={showCart} func={handleCartClick}/>} />
           <Route path="/trending" element={<TrendingProducts />} />
-          <Route path="/mycart" element={<MyCart />} />
+          {/* <Route func={handleCartClick} path="/mycart" element={<MyCart />} /> */}
           <Route path="/checkout" element={<CheckoutPage />} /> 
         </Routes>
+        <Footer />
       </Router>
     </CartProvider>
   );

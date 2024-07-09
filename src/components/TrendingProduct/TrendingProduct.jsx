@@ -14,15 +14,15 @@ import tp8 from '../../assets/images/tp8.png';
 import tp9 from '../../assets/images/tp9.png';
 
 const products = [
-  { title: 'Product 1', price: '$20.00', image: tp1 },
-  { title: 'Product 2', price: '$25.00', image: tp2 },
-  { title: 'Product 3', price: '$30.00', image: tp3 },
-  { title: 'Product 4', price: '$35.00', image: tp4 },
-  { title: 'Product 5', price: '$40.00', image: tp5 },
-  { title: 'Product 6', price: '$45.00', image: tp6 },
-  { title: 'Product 7', price: '$50.00', image: tp7 },
-  { title: 'Product 8', price: '$55.00', image: tp8 },
-  { title: 'Product 9', price: '$60.00', image: tp9 },
+  { title: 'Classic Nike sneakers', price: '2,500', image: tp1 },
+  { title: 'Classic sports', price: '2,500', image: tp2 },
+  { title: 'Brown face cap', price: '1,000', image: tp3 },
+  { title: 'Brown Zip up hoodie', price: '2,500', image: tp4 },
+  { title: 'Loose cotton pant', price: '2,500', image: tp5 },
+  { title: 'Cotton hoodie', price: '6,000', image: tp6 },
+  { title: 'Rubber croc sandal', price: '2,500', image: tp7 },
+  { title: 'Floral sneakers', price: '2,500', image: tp8 },
+  { title: 'Burgundy fashion boots', price: '1,000', image: tp9 },
 ];
 
 const TrendingProduct = () => {
@@ -49,7 +49,7 @@ const TrendingProduct = () => {
               {[...Array(5)].map((star, i) => (
                 <FaStar key={i} className="star-icon" />
               ))}
-              <p className="card-price">{product.price}</p>
+              <p className="card-price">₦{product.price}</p>
             </div>
             <div>
             <Button className="order-button" text="Add to cart" onClick={() => handleOrderNow(product)} />

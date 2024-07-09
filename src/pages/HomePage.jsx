@@ -1,14 +1,16 @@
 import React from 'react';
 import TrendingProduct from '../components/TrendingProduct/TrendingProduct';
+import MyCart from '../components/MyCart/MyCart';
 
 
-const HomePage = () => {
+const HomePage = ({showCart, func}) => {
   
 
   return(
    
   <div>
-      <TrendingProduct />
+      <TrendingProduct func={showCart} />
+            {showCart && (<MyCart func={func}/>)}
     
   </div>
   );
