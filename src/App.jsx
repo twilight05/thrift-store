@@ -19,6 +19,7 @@ const App = () => {
     setShowCart(!showCart);
   };
 
+  
   return (
     <CartProvider>
       <Router>
