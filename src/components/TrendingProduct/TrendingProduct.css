@@ -6,8 +6,11 @@
   
   .trending-products-section h2 {
     font-size: 2.5rem;
+    font-family: "Inter", sans-serif;
     margin-bottom: 20px;
     color: #494343;
+    display: flex;
+    margin-right: 20px;
   }
   
   .card-container {
